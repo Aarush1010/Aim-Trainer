@@ -23,9 +23,9 @@ def move_circle():
     canvas.coords(circle, new_x - CIRCLE_RADIUS, new_y - CIRCLE_RADIUS, new_x + CIRCLE_RADIUS, new_y + CIRCLE_RADIUS)
     # Reschedule the circle movement based on difficulty
     if difficulty == "Medium":
-        circle_move_job = root.after(1500, move_circle)  # Move every 1 second
+        circle_move_job = root.after(1500, move_circle)  # Move every 1.5 second
     elif difficulty == "Hard":
-        circle_move_job = root.after(750, move_circle)  # Move every 0.5 seconds
+        circle_move_job = root.after(750, move_circle)  # Move every 0.75 seconds
 
 def on_circle_click(event):
     """Handle circle click events, update the score, and reset the movement timer."""
